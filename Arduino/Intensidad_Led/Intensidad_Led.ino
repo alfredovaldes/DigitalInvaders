@@ -5,7 +5,7 @@ const int analogPin = 3;
 const int ledPin = 10;
 // variable para guardar el valor de la lectura
 int val = 0;
-
+int mapa = 0;
 void setup()
 {
   pinMode(ledPin, OUTPUT);
@@ -14,5 +14,6 @@ void setup()
 void loop()
 {
   val = analogRead(analogPin);    // Leemos el pin de entrada
+  map(val,0,1023,0,255);
   analogWrite(ledPin, val);       // Y le asignamos el valor al LED
 }
