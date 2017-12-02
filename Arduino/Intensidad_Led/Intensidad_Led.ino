@@ -14,6 +14,6 @@ void setup()
 void loop()
 {
   val = analogRead(analogPin);    // Leemos el pin de entrada
-  map(val,0,1023,0,255);
-  analogWrite(ledPin, val);       // Y le asignamos el valor al LED
+  mapa = map(val,0,1023,0,255);
+  analogWrite(ledPin, mapa);       // Y le asignamos el valor al LED
 }
